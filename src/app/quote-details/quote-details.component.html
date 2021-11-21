@@ -1,0 +1,11 @@
+<div *ngIf='newQuotes.length >= 1' class="part2">
+  <h1>Your Quotes</h1>
+  <div *ngFor='let quote of newQuotes'>
+    <div class="quotesDisplay">
+      <p><strong>Quote:</strong> "{{quote.quote}}"</p>
+      <p><strong>Author:</strong> "{{quote.quoteAuthor}}"</p>
+      <p><strong>Submitted by:</strong> "{{quote.submittedBy}}"</p>
+    </div>
+    <br>
+  </div>
+</div>

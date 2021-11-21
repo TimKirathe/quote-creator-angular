@@ -1,0 +1,35 @@
+<div class="contain">
+  <div class="part1">
+    <div class="welcomeSection">
+      <h1>Welcome to Quote Creator</h1>
+      <p>The first website on the internet that allows you to upload created or existing quotes and have them upvoted or downvoted!</p>
+    </div>
+    <hr>
+    <form #quoteForm='ngForm' (ngSubmit)='onSubmit(quoteForm.value)' (ngSubmit)='quoteForm.reset()'>
+      <div class="form-group">
+        <label for="quote">Please Enter Your Quote:</label>
+        <textarea required ngModel minlength='1' name='quote' #name='ngModel' id="quote" class="form-control" rows="2" ></textarea>
+        <div *ngIf='name.touched && !name.valid' class="alert alert-danger">
+          Quote is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="quoteAuthor">Author of the Quote:</label>
+        <input required ngModel name='quoteAuthor' #quoteAuthor='ngModel' minlength='1' type="text" id="quoteAuthor" class="form-control" />
+        <div *ngIf='quoteAuthor.touched && !quoteAuthor.valid' class="alert alert-danger">
+          Author is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="submittedBy">Submitted By:</label>
+        <input required ngModel name='submittedBy' #submittedBy='ngModel' type="text" id="submittedBy" class="form-control" />
+        <div *ngIf='submittedBy.touched && !submittedBy.valid' class="alert alert-danger">
+          Submitted by?
+        </div>
+      </div>
+      <pre></pre>
+      <button type="submit" class="btn btn-outline-primary" id="submitButton">Submit!</button>
+    </form>
+  </div>
+  <app-quote-details [newQuotes]='quotes'></app-quote-details>
+</div>
