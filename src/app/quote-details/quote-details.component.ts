@@ -9,9 +9,6 @@ import { Quote } from '../quote';
 export class QuoteDetailsComponent implements OnInit {
 
   @Input() newQuotes: Quote[] = [];
-
-
-
   constructor() { }
 
   ngOnInit(): void {

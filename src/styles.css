@@ -78,3 +78,31 @@ div.part2 h1 {
   margin: auto;
   margin-bottom: 1rem;
 }
+
+div.voting input {
+  width: 5rem;
+  border: none;
+  background: none;
+  pointer-events: none;
+  color: #919191;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+div.voting button {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  padding: 0 1.5rem;
+  margin: 1rem 0;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: color 0.5s ease-in;
+}
+div.voting button.upvote:hover {
+  color: green;
+}
+
+div.voting button.downvote:hover {
+  color: red;
+}
