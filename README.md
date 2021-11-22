@@ -10,7 +10,10 @@ This is a web application that allows the user to create quotes of their own and
 
 ##### Setup Instructions and Installation
 
-- Fork this repository into your own using the link: ``
+- Fork this repository into your own.
+- Next, clone the remote repository into your local one using: `git clone https://github.com/TimKirathe/quote-creator-angular.git`.
+- You can now access all the code by opening the `create-quotes` directory in your favorite text-editor.
+- Once navigated to the `create-quotes directory`, run the command `ng serve --open` to deploy the application on a live server.
 
 
 ## Development
@@ -37,7 +40,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 ### License
 
 *MIT*
-Copyright (c) 2021 **Your name**
+Copyright (c) 2021 **Timothy Kirathe**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
