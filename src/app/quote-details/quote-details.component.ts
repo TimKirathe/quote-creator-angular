@@ -9,16 +9,18 @@ declare const downvoteFunc: any;
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  upvote: number = 0;
+  downvote: number = 0;
 
 
   @Input() newQuotes: Quote[] = [];
 
   newUpvoteFunc() {
-    upvoteFunc();
+    this.upvote + 1;
   }
 
   newDownvoteFunc() {
-    downvoteFunc();
+    this.downvote + 1;
   }
   constructor() { }
 
