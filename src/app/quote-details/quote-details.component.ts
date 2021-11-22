@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Quote } from '../quote';
+declare const voteFunc: any;
 
 @Component({
   selector: 'app-quote-details',
@@ -7,7 +8,9 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-
+  newVoteFunc() {
+    voteFunc();
+  }
   @Input() newQuotes: Quote[] = [];
   constructor() { }
 
