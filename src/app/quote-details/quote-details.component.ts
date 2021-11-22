@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Quote } from '../quote';
-declare const voteFunc: any;
+declare const upvoteFunc: any;
+declare const downvoteFunc: any;
 
 @Component({
   selector: 'app-quote-details',
@@ -8,9 +9,14 @@ declare const voteFunc: any;
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  newVoteFunc() {
-    voteFunc();
+  newUpvoteFunc() {
+    upvoteFunc();
   }
+
+  newDownvoteFunc() {
+    downvoteFunc();
+  }
+
   @Input() newQuotes: Quote[] = [];
   constructor() { }
 

@@ -23,5 +23,7 @@ function upvoteFunc() {
 }
 
 function downvoteFunc() {
-  
+  var downvote = document.querySelector('.input2');
+  downvote.value = parseInt(downvote.value) + 1;
+  downvote.style.color = '#ff0000';
 }
