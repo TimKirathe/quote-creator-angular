@@ -2,7 +2,7 @@
   <h1>Your Quotes</h1>
   <div *ngFor='let quote of quotes; let i = index'>
     <div class="quotesDisplay">
-      <div *ngIf='mostVotes' appHighlight>
+      <div *ngIf='highestVotedFunc() === quote.upvote' appHighlight>
         <p><strong>Quote:</strong> "{{quote.quote}}"</p>
       </div>
       <p><strong>Author:</strong> "{{quote.quoteAuthor}}"</p>
