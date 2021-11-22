@@ -69,6 +69,22 @@ div.part2 h1 {
   font-family: 'Comforter', cursive;
 }
 
+div.contain2 {
+  width: 95%;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  border: 0 solid black;
+  border-radius: 0.3rem;
+  background-color: var(--background2)
+}
+div.existingQuotes h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Comforter', cursive;
+}
+
 .quotesDisplay {
   border-radius: 0.3rem;
   box-shadow: 0.3rem 0.3rem 0.8rem  grey;
