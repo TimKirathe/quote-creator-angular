@@ -2,7 +2,9 @@
   <h1>Your Quotes</h1>
   <div *ngFor='let quote of quotes; let i = index'>
     <div class="quotesDisplay">
-      <p appHighlight><strong>Quote:</strong> "{{quote.quote}}"</p>
+      <div *ngIf='mostVotes' appHighlight>
+        <p><strong>Quote:</strong> "{{quote.quote}}"</p>
+      </div>
       <p><strong>Author:</strong> "{{quote.quoteAuthor}}"</p>
       <p><strong>Submitted by:</strong> "{{quote.submittedBy}}"</p>
       <div class="voting">
@@ -15,7 +17,7 @@
           <i class="fa fa-thumbs-down"></i>
         </button>
         <p class="voteNums">{{quote.downvote}}</p>
-        <p class="dateDisplay"><strong>Created:</strong> {{quote.timePassed | dateAgo}}</p>
+        <p class="dateDisplay"><strong>Created:</strong> "{{quote.timePassed | dateAgo}}"</p>
       </div>
     </div>
     <br>

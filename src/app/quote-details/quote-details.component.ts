@@ -12,10 +12,19 @@ export class QuoteDetailsComponent implements OnInit {
 
 
   @Input() quotes: Quote[];
-
+  mostVoted: any;
+  mostVotes: boolean;
 
   newUpvoteFunc(index: number) {
     this.quotes[index].upvote += 1;
+    if (this.quotes[index + 1].upvote > this.quotes[index].upvote) {
+      this.mostVoted = this.quotes[index + 1].quote;
+      this.mostVotes = true;
+    }
+    else {
+      this.mostVoted = this.quotes[index].quote;
+      this.mostVotes = true;
+    }
   }
 
   newDownvoteFunc(index: any) {
