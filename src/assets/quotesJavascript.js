@@ -17,13 +17,13 @@
 }*/
 
 function upvoteFunc() {
-  var upvote = document.querySelector('.input1');
+  var upvote = document.querySelector('#input1');
   upvote.value = parseInt(upvote.value) + 1;
   upvote.style.color = '#12ff00';
 }
 
 function downvoteFunc() {
-  var downvote = document.querySelector('.input2');
+  var downvote = document.querySelector('#input2');
   downvote.value = parseInt(downvote.value) + 1;
   downvote.style.color = '#ff0000';
 }
