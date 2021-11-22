@@ -9,12 +9,13 @@
         <button (click)='newUpvoteFunc(i)' class="upvote">
           <i class="fa fa-thumbs-up"></i>
         </button>
-        <p class="voteNums">{{quote.upvote}} created: {{quote.timePassed | dateAgo}}</p>
+        <p class="voteNums">{{quote.upvote}}</p>
 
         <button (click)='newDownvoteFunc(i)' class="downvote">
           <i class="fa fa-thumbs-down"></i>
         </button>
         <p class="voteNums">{{quote.downvote}}</p>
+        <p class="dateDisplay"><strong>Created:</strong> {{quote.timePassed | dateAgo}}</p>
       </div>
     </div>
     <br>

@@ -107,3 +107,7 @@ div.voting button.upvote:hover {
 div.voting button.downvote:hover {
   color: red;
 }
+
+.dateDisplay {
+  padding-left: 1rem;
+}
