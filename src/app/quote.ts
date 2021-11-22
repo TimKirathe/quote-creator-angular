@@ -1,5 +1,7 @@
 export class Quote {
-  constructor(public quote: string, public quoteAuthor: string, public submittedBy: string) {
+  upvote: number = 0;
+  downvote = 0;
+  constructor(public quote: any, public quoteAuthor: any, public submittedBy: any, public timePassed: any) {
 
   }
 }

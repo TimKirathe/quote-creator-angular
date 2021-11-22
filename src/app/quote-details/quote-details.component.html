@@ -1,20 +1,20 @@
-<div *ngIf='newQuotes.length >= 1' class="part2">
+<div *ngIf='quotes.length >= 1' class="part2">
   <h1>Your Quotes</h1>
-  <div *ngFor='let quote of newQuotes'>
+  <div *ngFor='let quote of quotes; let i = index'>
     <div class="quotesDisplay">
-      <p><strong>Quote:</strong> "{{quote.quote}}"</p>
+      <p appHighlight><strong>Quote:</strong> "{{quote.quote}}"</p>
       <p><strong>Author:</strong> "{{quote.quoteAuthor}}"</p>
       <p><strong>Submitted by:</strong> "{{quote.submittedBy}}"</p>
       <div class="voting">
-        <button (click)='newUpvoteFunc()' class="upvote">
+        <button (click)='newUpvoteFunc(i)' class="upvote">
           <i class="fa fa-thumbs-up"></i>
         </button>
-        <p class="voteNums">{{this.upvote}}</p>
+        <p class="voteNums">{{quote.upvote}} created: {{quote.timePassed | dateAgo}}</p>
 
-        <button (click)='newDownvoteFunc()' class="downvote">
+        <button (click)='newDownvoteFunc(i)' class="downvote">
           <i class="fa fa-thumbs-down"></i>
         </button>
-        <input type="number" id="input2" value='0' />
+        <p class="voteNums">{{quote.downvote}}</p>
       </div>
     </div>
     <br>

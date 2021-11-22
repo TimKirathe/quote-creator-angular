@@ -10,12 +10,18 @@ import { Quote } from '../quote';
 export class QuoteFormComponent implements OnInit {
 
   quotes: Quote[] = [];
+  newQuote: Quote;
 
   onSubmit(value: any) {
-    console.log(value);
-    this.quotes.push(value)
+    this.newQuote = new Quote(value.quote, value.quoteAuthor, value.submittedBy, new Date());
+    console.log(this.newQuote.upvote);
+    this.quotes.push(this.newQuote);
     console.log(this.quotes);
   }
+
+
+
+
   constructor() { }
 
   ngOnInit(): void {

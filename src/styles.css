@@ -79,7 +79,8 @@ div.part2 h1 {
   margin-bottom: 1rem;
 }
 
-div.voting input {
+div.voting p.voteNums {
+  display: inline;
   width: 5rem;
   border: none;
   background: none;
